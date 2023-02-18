@@ -1,3 +1,14 @@
+type Order {
+  carrier: String
+  createdAt: Date
+  shippingCost: Int
+  trackingId: String
+  Adress: String
+  City: String
+  Lat: Float
+  Lng: Float
+}
+
 type Query {
   getOrders: JSON
     @rest(
