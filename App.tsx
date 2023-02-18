@@ -6,7 +6,7 @@ import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client
 
 
 const client = new ApolloClient({
-  uri: 'https://dashboard.stepzen.com/explorer?endpoint=api%2Fjazzy-mongoose',
+  uri: 'https://melnik.stepzen.net/api/jazzy-mongoose/__graphql',
   cache: new InMemoryCache(),
 });
 
