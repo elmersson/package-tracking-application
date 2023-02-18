@@ -20,7 +20,7 @@ type OrderList {
 }
 
 type Query {
-  getOrdersById: [id: ID]: Order
+  getOrderById(id: ID!): Order
     @rest(
       endpoint: "https://package-tracking-df308-default-rtdb.europe-west1.firebasedatabase.app/orders/$id.json"
     )
