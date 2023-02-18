@@ -14,9 +14,11 @@ export default function App() {
   return (
     // @ts-ignore
     <TailwindProvider utilities={utilities}>
-      <NavigationContainer>
-        <RootNavigatior />
-      </NavigationContainer>
+      <ApolloProvider client={client}>
+        <NavigationContainer>
+          <RootNavigatior />
+        </NavigationContainer>
+      </ApolloProvider>
     </TailwindProvider>
   );
 }
