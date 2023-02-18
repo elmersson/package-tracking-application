@@ -1,4 +1,4 @@
-type ItemsEntry {
+type Items {
   item_id: Int
   name: String
   price: Float
@@ -6,12 +6,12 @@ type ItemsEntry {
 }
 type TrackingItemsList {
   customer_id: String
-  items: [ItemsEntry]
+  items: [Items]
 }
 
 type Query {
-  getTrackingItemsById: TrackingItemsList
+  getTrackingItemsById(id: ID!): TrackingItemsList
     @rest(
-      endpoint: "https://package-tracking-df308-default-rtdb.europe-west1.firebasedatabase.app/trackingItems/1Z4V180W0324616505.json"
+      endpoint: "https://package-tracking-df308-default-rtdb.europe-west1.firebasedatabase.app/trackingItems/$id.json"
     )
 }
